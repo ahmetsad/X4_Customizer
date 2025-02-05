@@ -120,6 +120,31 @@ def Adjust_Ware_Prices(
     return
 
 
+@Transform_Wrapper(shared_docs = doc_matching_rules)
+def Adjust_Ware_Amount(
+        # Allow multipliers to be given as a loose list of args.
+        *match_rule_multipliers
+    ):
+    '''
+    Adjusts ware resource amount. This should be used with care when selecting
+    production chain related wares.
+    
+    * match_rule_multipliers:
+      - Series of matching rules paired with the spread multipliers to use.
+    '''
+    wares_file = Load_File('libraries/wares.xml')
+    xml_root = wares_file.Get_Root()
+
+    # Get wars paired with multipliers.
+    for ware, multiplier in Gen_Wares_Matched_To_Args(xml_root, match_rule_multipliers):
+        # Look up the existing spread.
+        ware_node = ware.findall('./production/primary/ware')
+        if ware_node != None:
+            for ware_amounts in ware_node:
+                XML_Multiply_Int_Attribute(ware_amounts, 'amount', multiplier)
+    wares_file.Update_Root(xml_root)
+    return
+
 
 ##############################################################################
 # Support functions.
