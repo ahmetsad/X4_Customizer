@@ -181,13 +181,13 @@ bullet_item_macros = [
     E('damage'                    , './/damage'          , 'value'        , 'Damage', ''),
     E('damage_shield'             , './/damage'          , 'shield'       , '+Shield', ''),
     E('damage_hull'               , './/damage'          , 'hull'         , 'phase', ''),
-    E('damage_hull'               , './/damage'          , 'noshield'         , '+hull', ''),
+    E('damage_hull'               , './/damage'          , 'noshield'     , '+hull', ''),
     E('damage_repair'             , './/damage'          , 'repair'       , 'Repair', 'Set to 1 to flip to repairing.'),
     
-    E('areadamage'                    , './/areadamage'          , 'value'        , 'Damage', ''),
-    E('areadamage_shield'             , './/areadamage'          , 'shield'       , '+Shield', ''),
-    E('areadamage_hull'               , './/areadamage'          , 'noshield'         , '+Hull', ''),
-    E('areadamage_range'               , './/areadamage'          , 'range'         , 'radius', ''),
+    E('areadamage'                    , './/areadamage'          , 'value'        , 'Exp Damage', ''),
+    E('areadamage_shield'             , './/areadamage'          , 'shield'       , 'Exp +Shield', ''),
+    E('areadamage_hull'               , './/areadamage'          , 'noshield'     , 'Exp +Hull', ''),
+    E('areadamage_range'              , './/areadamage'          , 'range'        , 'Exp radius', ''),
 
     E('bullet_speed'              , './/bullet'          , 'speed'        , 'Bullet Speed', ''),
     E('bullet_lifetime'           , './/bullet'          , 'lifetime'     , 'Bullet Lifetime', ''),
