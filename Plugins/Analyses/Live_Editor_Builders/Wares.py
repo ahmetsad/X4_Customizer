@@ -231,6 +231,7 @@ ware_item_macros = [
     E('price_min'             , 'PREFIX/price'           , 'min'            , 'Price Min', ''),
     E('price_avg'             , 'PREFIX/price'           , 'average'        , 'Price Avg', ''),
     E('price_max'             , 'PREFIX/price'           , 'max'            , 'Price Max', ''),
+    E('owner'                 , 'PREFIX/owner'           , 'faction'        , 'Owner', ''),
     D('price_spread'          , Display_Update_Price_Spread                 , 'Price Spread', ''),    
     E('volume'                , 'PREFIX'                 , 'volume'         , 'Volume', ''),
     E('tags'                  , 'PREFIX'                 , 'tags'           , 'Tags', ''),
